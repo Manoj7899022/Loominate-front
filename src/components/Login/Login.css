@@ -1,0 +1,90 @@
+.login{
+    /* color: white; */
+    font-family: "Barlow";
+    display: flex;
+    justify-content: space-around;
+}
+.login .loginLeft #img1{
+    height: 210px;
+    margin-top: 20px;
+}
+.login .loginLeft h1{
+    font-size: 70px;
+}
+.login .loginLeft p{
+    font-size: 30px;
+}
+.form {
+    background-color: white;
+    height: 550px;
+    width: 550px;
+    border-radius: 30px;
+}
+.form .btn{
+    color:#03c5cc;
+    display: flex;
+    justify-content: space-around;
+    background-color: #ebedee;
+    height: 60px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px
+
+}
+.form a{
+    color:#03c5cc;
+    text-decoration: underline;
+    margin-top: 10px;
+}
+.form-input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    padding: 15px;
+}
+input:focus{
+    outline: none;
+}
+.form-input h2{
+    margin-top: 60px;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.form-input_1, .form-input_2{
+    display: flex;
+    flex-direction: column;
+    margin-left: px;
+    width: 500px;
+    height: auto;
+    padding: 10px 0;
+}
+.form-input_1{
+    margin: 20px;
+}
+.form-input_2{
+    margin: 20px;
+}
+.form-input_1 input , .form-input_2 input{
+    border-bottom:2px solid black ;
+    font-size: 20px;
+    /* padding: 20px; */
+    
+
+}
+.form-input_1 input input::placeholder{
+    font-weight: 300;
+}
+.form .btn-submit{
+    background: linear-gradient(116.45deg,#03c5cc -23.1%,#4b008b 250.18%);
+    width: 95%;
+    height: 50px;
+    margin-top: 40px;
+    border-radius: 8px;
+    margin-left: 12px;
+}
+
+.signUP-para p:first-child{
+    margin-top: 10px;
+}
