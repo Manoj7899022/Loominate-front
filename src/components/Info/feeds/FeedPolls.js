@@ -6,8 +6,11 @@ import { CommentOutlined } from "@ant-design/icons";
 import { Avatar, Button } from "antd";
 import React from "react";
 import { Input } from 'antd';
+import { useSelector } from "react-redux";
+import { selectMailData } from "../../features/maildataSlice";
 
 const FeedPolls = () => {
+  const userData = useSelector(selectMailData);
   const suffix = (
     <Button 
     className="text-xs pr-1 pt-2"
@@ -31,7 +34,7 @@ const FeedPolls = () => {
       </div>
       <div className="flex text-center justify-start pt-4 pb-4">
         <div className="pr-2">
-          <Avatar size="large" icon={<UserOutlined />} />
+          <Avatar size="large" src={userData? (userData.logo):("")} icon={<UserOutlined />} />
         </div>
         <div className="font-semibold pr-3 pt-2">
           <h3>Anonymous</h3>
@@ -78,7 +81,7 @@ const FeedPolls = () => {
       </div>
       <div className="mt-4 flex ">
         <div>
-          <Avatar size={48} icon={<UserOutlined />} />
+          <Avatar size={48} src={userData? (userData.logo):("")} icon={<UserOutlined />} />
         </div>
         <div className="ml-3 " style={{width:"500px"}} >
           <Input

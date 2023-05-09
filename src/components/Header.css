@@ -1,0 +1,10 @@
+element.style {
+    transform-origin: 792px -69px;
+    position: absolute;
+    right: 78px !important
+    /* top:"50px"; */
+}
+
+.ant-modal{
+    margin-right: 70px !important
+}

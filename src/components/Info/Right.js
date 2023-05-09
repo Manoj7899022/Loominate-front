@@ -6,8 +6,12 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { selectMailData } from '../features/maildataSlice';
+import { useSelector } from 'react-redux';
+import { Avatar } from 'antd';
 
 const Right = () => {
+  const userData = useSelector(selectMailData);
     const [isModalOpen1, setIsModalOpen1] = useState(false);
 
     const showModal1 = () => {
@@ -33,8 +37,8 @@ const Right = () => {
       };
 
   return (
-    <div  className='ml-6 mb-5 ' style={{flex: .3}} >
-        <div style={{backgroundColor: 'white'}} className=' mt-5 p-5 mb-5 rounded-md mr-20'>
+    <div  className='ml-6 mb-5 ' style={{flex: .2}} >
+        <div style={{backgroundColor: 'white'}} className=' mt-5 p-5 mb-5 rounded-md mr-20' >
             <div className='flex mb-6  '>
                 <h1 className='uppercase text-xl'>My Coworker Community</h1>
                <sup> <svg onClick={showModal1} className='w-5 ml-1 cursor-pointer h-4' id="info-circle" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#0092E4" d="M12,2A10,10,0,1,0,22,12,10.01114,10.01114,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8.00917,8.00917,0,0,1,12,20Zm0-8.5a1,1,0,0,0-1,1v3a1,1,0,0,0,2,0v-3A1,1,0,0,0,12,11.5Zm0-4a1.25,1.25,0,1,0,1.25,1.25A1.25,1.25,0,0,0,12,7.5Z"></path></svg></sup>
@@ -53,10 +57,10 @@ const Right = () => {
             <h1 className='text-start uppercase text-xl mb-4'>My profile</h1>
             <div className='flex flex-col justify-start'>
                     <div className='flex  items-center  '>
-                    <svg style={{width:"80px"}} xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 24 24" id="user-circle"><path fill="#6563FF" d="M13,2A10,10,0,0,0,4.65,18.76h0a10,10,0,0,0,14.7,0h0A10,10,0,0,0,12,2Zm0,18a8,8,0,0,1-5.55-2.25,6,6,0,0,1,11.1,0A8,8,0,0,1,12,20ZM10,10a2,2,0,1,1,2,2A2,2,0,0,1,10,10Zm8.91,6A8,8,0,0,0,15,12.62a4,4,0,1,0-6,0A8,8,0,0,0,5.09,16,7.92,7.92,0,0,1,4,12a8,8,0,0,1,16,0A7.92,7.92,0,0,1,18.91,16Z"  ></path></svg>
+                    <Avatar src={userData? (userData.logo):("")} style={{width:"80px ", height:"60px"}} />
                         <div className='ml-2 '>
-                            <h1 className='text-xl font-bold'>territorialsabe</h1>
-                            <p className='font-light text-sm '>Jioned May 2023</p>
+                            <h1 className='text-xl font-bold'>{userData?(userData.email):("")}</h1>
+                            <p className='font-light text-sm '><span style={{fontWeight:"500"}} >Jioned</span> {userData? (userData.updatedAt):("")}</p>
                         </div>
                     </div>
                     <div>
@@ -150,7 +154,7 @@ const Right = () => {
         </div>
         <div style={{backgroundColor: 'white'}} className=' mr-20 mt-5 p-5 mb-5 rounded-md'>
             <h1 className='text-start text-xl mb-2'>Our culture is community moderated, help flag:</h1>
-            <ul>
+            <ul className=' list-disc ml-4'>
                 <li className='text-start'>Naming of individual staff members</li>
                 <li className='text-start'>Discrimination, Hate Speech or Profanity</li>
                 <li className='text-start'>Bullying, Harassment or Trolling</li>

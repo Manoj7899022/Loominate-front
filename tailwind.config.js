@@ -22,7 +22,9 @@ module.exports = {
       voted:"#03c5cc",
       voted_border:"#03c5cc",
       VotingEnd:"#a0a0a0",
-      VotedColl:"#03c5cc"
+      VotedColl:"#03c5cc",
+      HoverColor:"#e9e9e9"
+
     }
   },
   plugins: [],

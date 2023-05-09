@@ -21,6 +21,7 @@ function App() {
               )
             }
             <Route path="/Signup" element={<Signup/>} />
+            <Route path='/Home' element={<Home />} />
           </Routes>
       </BrowserRouter>
 

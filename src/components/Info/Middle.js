@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import { DownOutlined } from '@ant-design/icons';
-import { Dropdown, Space } from 'antd';
+import { Avatar, Dropdown, Space } from 'antd';
 import FeedPost from "./feeds/FeedPost";
 import FeedPolls from "./feeds/FeedPolls";
+import { useSelector } from "react-redux";
+import { selectMailData } from "../features/maildataSlice";
 
 const Middle = () => {
+ 
   const [feed, setFeed] = useState(true)
   const [poll, setPoll] = useState(true)
   const [initia, setIntia] = useState(true)
@@ -42,7 +45,7 @@ const Middle = () => {
 
 
   return (
-    <div style={{ flex: 0.6 }} >
+    <div style={{ flex: 0.5 }} >
       <div
         style={{ backgroundColor: "white" }}
         className=" flex justify-between text-center ml-3 mt-5 p-3 mb-5 rounded-md w-full "

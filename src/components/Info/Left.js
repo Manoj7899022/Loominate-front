@@ -5,7 +5,7 @@ const Left = () => {
 
     return (
         
-      <div className='w-80' style={{flex: 0.4}}>
+      <div className='w-' style={{flex: 0.3}}>
           <div style={{backgroundColor: 'white',}} className='flex flex-col items-start ml-20 mt-5 p-5 mb-5 rounded-md'>
               <div className='flex cursor-pointer mb-3 w-full p-2 rounded-md bg-gradient-to-r from-signInActive to-buttonRight  '>
                   <img className='w-4 mr-3' style={{color:"white"}} src='https://www.svgrepo.com/show/483341/home.svg' />
